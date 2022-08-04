@@ -1,11 +1,3 @@
-// polyfill TextEncoder for node < v12
-import { TextEncoder, TextDecoder } from 'text-encoding';
-
-if (typeof global.TextEncoder === 'undefined') {
-    global.TextEncoder = TextEncoder;
-    global.TextDecoder = TextDecoder;
-}
-
 import { expect } from 'chai';
 import * as brotliPromise from '..';
 import init from '../pkg.web/brotli_wasm';
